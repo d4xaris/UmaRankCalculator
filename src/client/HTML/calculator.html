@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <h1 align="center">Calculator</h1>
@@ -13,21 +14,44 @@
     I will remake it in the future, or you can do it if you want and know how to.
     Gonna replace all things in future using CSS. --Roma-- -->
 
-
     <div>
       <table border="1">
+        <tr align="center"></tr>
         <tr align="center">
-          <th><button>
-            Choose your Uma
-          </button></th>
+          <td>
+            <div id="chosenUmaPreview"></div>
+          </td>
         </tr>
+        <th><button id="umaBtn">Choose your Uma</button></th>
         <tr align="center">
-          <td>Choose star rate <!--Gonna add here an option to choose star rate, I just don't remember how and can't find it right now. Gonna add it later. --Roma-- --></td>
+          <td>
+            Choose star rate
+            <!--Gonna add here an option to choose star rate, I just don't remember how and can't find it right now. Gonna add it later. --Roma-- -->
+          </td>
         </tr>
         <tr>
-          <td>Unique skill level <!--Gonna add here an option to choose level, I just don't remember how and can't find it right now. Gonna add it later. --Roma-- --></td>
+          <td>
+            Unique skill level
+            <!--Gonna add here an option to choose level, I just don't remember how and can't find it right now. Gonna add it later. --Roma-- -->
+          </td>
         </tr>
       </table>
+    </div>
+
+    <div id="umaModal" class="modal"> <!--modal for selecting an uma (idk how to connect the stats and etc yet but it works) --Katy-- -->
+      <div class="modal-content">
+        <span class="umaClose">&times;</span> 
+
+        <h3>Select an Uma</h3>
+
+        <div class="image-grid">
+          <img src="../images/img1.png" class="uma" />
+          <img src="../images/img2.png" class="uma" />
+          <img src="../images/img3.png" class="uma" />
+        </div>
+
+        <button id="saveUmaBtn" disabled>Save</button>
+      </div>
     </div>
 
     <div>
@@ -41,11 +65,11 @@
         </tr>
         <!--Gonna connect all inputs with JS. --Roma-- -->
         <tr align="center">
-          <td><input></td>
-          <td><input></td>
-          <td><input></td>
-          <td><input></td>
-          <td><input></td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
         </tr>
       </table>
     </div>
@@ -85,7 +109,7 @@
     <div>
       <table>
         <tr align="center">
-          <th><input></th>
+          <th><input /></th>
         </tr>
         <tr align="center">
           <td>Skill points</td>
@@ -95,16 +119,19 @@
 
     <div>
       <!--The hardest part of this page I guess. --Roma-- -->
-      <button>
-        Skills
-      </button>
+      <button>Skills</button>
     </div>
 
     <div>
-      <button id="resultbutton" type="button" onclick='window.location.href="result.html"'>
+      <button
+        id="resultbutton"
+        type="button"
+        onclick="window.location.href = 'result.html'"
+      >
         Submit
       </button>
     </div>
 
+    <script src="../JS/calculator.js"></script>
   </body>
 </html>

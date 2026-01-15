@@ -12,8 +12,6 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// ROUTES
-
-app.get("/main", (req, res) => {
-  res.send("<h1>baka</h1>");
+app.get("/about", (req, res) => {
+  res.send("This is the about page");
 });
